@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>art? | lonehoof</title>
+  <meta name="description" content="Charcoal art prints by Lone Hoof — a Bristol-based artist. Limited edition Giclée prints on Hahnemühle German Etching paper." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.lonehoof.com/" />
+  <!-- Open Graph (social sharing previews) -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:site_name"   content="Lone Hoof" />
+  <meta property="og:title"       content="art? | Lone Hoof" />
+  <meta property="og:description" content="Charcoal art prints by Lone Hoof — a Bristol-based artist. Limited edition Giclée prints on Hahnemühle German Etching paper." />
+  <meta property="og:url"         content="https://www.lonehoof.com/" />
+  <meta property="og:image"       content="https://www.lonehoof.com/images/the-situation-in-paradise.jpg" />
+  <!-- Twitter card -->
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:title"       content="art? | Lone Hoof" />
+  <meta name="twitter:description" content="Charcoal art prints by Lone Hoof — a Bristol-based artist. Limited edition Giclée prints on Hahnemühle German Etching paper." />
+  <meta name="twitter:image"       content="https://www.lonehoof.com/images/the-situation-in-paradise.jpg" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="grain"></div>
+
+  <header>
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <span class="logo-lone">LONE</span>
+        <span class="logo-hoof">HOOF</span>
+      </a>
+      <div class="header-socials">
+        <a href="https://www.instagram.com/lone_hoof/" target="_blank" aria-label="Instagram">
+          <img src="images/icon-instagram.png" alt="Instagram" />
+        </a>
+        <a href="https://lonehoof.substack.com" target="_blank" aria-label="Substack">
+          <img src="images/icon-substack.png" alt="Substack" />
+        </a>
+        <a href="contact.html" aria-label="Contact">
+          <img src="images/icon-contact.png" alt="Contact" />
+        </a>
+      </div>
+      <nav class="header-nav">
+        <a href="index.html" class="active">art?</a>
+        <a href="who.html">who?</a>
+        <a href="faqs.html">faqs?</a>
+      </nav>
+    </div>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <nav class="mobile-nav" id="mobileNav">
+    <a href="index.html" class="active">art?</a>
+    <a href="who.html">who?</a>
+    <a href="faqs.html">faqs?</a>
+    <div class="mobile-social">
+      <a href="https://www.instagram.com/lone_hoof/" target="_blank">Instagram</a>
+      <a href="https://lonehoof.substack.com" target="_blank">Substack</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+
+  <main>
+    <!-- Grid is built here by main.js reading data.js -->
+    <div class="art-grid" id="artGrid"></div>
+  </main>
+
+  <footer>
+    <p>© Lone Hoof 2026</p>
+    <div class="footer-links">
+      <a href="privacy.html">privacy</a>
+      <a href="refunds.html">refunds &amp; returns</a>
+      <a href="terms.html">terms</a>
+    </div>
+  </footer>
+
+  <!-- Load artwork data first, then the main script -->
+  <script src="data.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
