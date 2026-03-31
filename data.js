@@ -28,86 +28,86 @@ const ARTWORK = [
   // ── FOR SALE ─────────────────────────────────────────────
 
   {
-    img:    "the-situation-in-paradise_LOW_RES.jpg",
+    img:    "the-situation-in-paradise.jpg",
     title:  "The situation in paradise",
     price:  "£49",
     size:   "26.5 x 32 cm (30.5 x 36 cm with border)",
     medium: "charcoal",
     paper:  "300 gsm Hahnemühle German Etching paper (see link below on how to order)",
     notes:  null,
-    img2:   "paradise2_LOW_RES.jpg",
+    img2:   "paradise2.jpg",
   },
 
   {
-    img:    "insta-ready-at-the-cathedral_LOW_RES.jpg",
+    img:    "insta-ready-at-the-cathedral.jpg",
     title:  "Insta-ready at the cathedral",
     price:  "£49",
     size:   "26.5 x 32 cm (30.5 x 36 cm with border)",
     medium: "charcoal",
     paper:  "300 gsm Hahnemühle German Etching paper (see link below on how to order)",
     notes:  null,
-    img2:   "instaready2_LOW_RES.jpg",
+    img2:   "instaready2.jpg",
   },
 
   {
-    img:    "quaint-and-outdated-rituals_LOW_RES.jpg",
+    img:    "quaint-and-outdated-rituals.jpg",
     title:  "Quaint and outdated rituals",
     price:  "£49",
     size:   "26.5 x 32.5 cm (30.5 x 36 cm with border)",
     medium: "charcoal",
     paper:  "300 gsm Hahnemühle German Etching paper (see link below on how to order)",
     notes:  null,
-    img2:   "quaint2_LOW_RES.jpg",
+    img2:   "quaint2.jpg",
   },
 
   {
-    img:    "a-child-showing-kindness-at-christmas_LOW_RES.jpg",
+    img:    "a-child-showing-kindness-at-christmas.jpg",
     title:  "A child showing kindness at christmas",
     price:  "£49",
     size:   "25.5 x 37.5 cm (29.5 x 41.5 cm with border)",
     medium: "charcoal",
     paper:  "300 gsm Hahnemühle German Etching paper (see link below on how to order)",
     notes:  null,
-    img2:   "kindness2_LOW_RES.jpg",
+    img2:   "kindness2.jpg",
   },
 
   {
-    img:    "climate-change-deniers-enjoying-a-game-of-chess_LOW_RES.jpg",
+    img:    "climate-change-deniers-enjoying-a-game-of-chess.jpg",
     title:  "Climate change deniers enjoying a game of chess",
     price:  "£39",
     size:   "25.5 x 27 cm (29.5 x 31 cm with border)",
     medium: "charcoal",
     paper:  "300 gsm Hahnemühle German Etching paper (see link below on how to order)",
     notes:  null,
-    img2:   "deniers2_LOW_RES.jpg",
+    img2:   "deniers2.jpg",
   },
 
   {
-    img:    "la-cave-du-jazz_LOW_RES.jpg",
+    img:    "la-cave-du-jazz.jpg",
     title:  "La cave du jazz",
     price:  "£39",
     size:   "29.5 x 24.5 cm (33.5 x 28.5 cm with border)",
     medium: "charcoal",
     paper:  "300 gsm Hahnemühle German Etching paper (see link below on how to order)",
     notes:  null,
-    img2:   "cave2_LOW_RES.jpg",
+    img2:   "cave2.jpg",
   },
 
   {
-    img:    "the-scroller-the-troller-and-the-influencer_LOW_RES.jpg",
+    img:    "the-scroller-the-troller-and-the-influencer.jpg",
     title:  "The scroller, the troller and the influencer",
     price:  "£39",
     size:   "25.5 x 27 cm (29.5 x 31 cm with border)",
     medium: "charcoal",
     paper:  "300 gsm Hahnemühle German Etching paper (see link below on how to order)",
     notes:  null,
-    img2:   "scroller2_LOW_RES.jpg",
+    img2:   "scroller2.jpg",
   },
 
   // ── GALLERY ONLY (not for sale) ──────────────────────────
 
   {
-    img:    "hoofy-advent-2025_LOW_RES.jpg",
+    img:    "hoofy-advent-2025.jpg",
     title:  "Hoofy Advent 2025",
     price:  null,
     size:   "80 x 22.5 cm",
@@ -118,7 +118,7 @@ const ARTWORK = [
   },
 
   {
-    img:    "people-eating-momos_LOW_RES.jpg",
+    img:    "people-eating-momos.jpg",
     title:  "People eating momos",
     price:  null,
     size:   "29.5 x 40.5 cm",
@@ -129,7 +129,7 @@ const ARTWORK = [
   },
 
   {
-    img:    "eating-beans-from-a-knife_LOW_RES.jpg",
+    img:    "eating-beans-from-a-knife.jpg",
     title:  "Eating beans from a knife (in the jungle)",
     price:  null,
     size:   "38 x 20 cm",
@@ -140,7 +140,7 @@ const ARTWORK = [
   },
 
   {
-    img:    "everything-i-remember-about-grange-hill_LOW_RES.jpg",
+    img:    "everything-i-remember-about-grange-hill.jpg",
     title:  "Everything I remember about Grange Hill",
     price:  null,
     size:   "30 x 32 cm",
@@ -151,7 +151,7 @@ const ARTWORK = [
   },
 
   {
-    img:    "pappy-scene-1_LOW_RES.jpg",
+    img:    "pappy-scene-1.jpg",
     title:  "Pappy P. Pappinson & Prince Marzipan (Une Belle Journee, Scene 1)",
     price:  null,
     size:   "30 x 30 cm",
