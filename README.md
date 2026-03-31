@@ -22,7 +22,7 @@ lonehoof/
 
 ## How to add a new piece
 
-1. Export/scan your artwork and save as a JPEG, e.g. `my-new-piece.jpg`
+1. Export/scan your artwork and save as a JPEG, e.g. `my-new-piece.jpg`. Ensure the export is lowest quality (in Affinity Publisher) and on the longest side pixels are set to 1600. This is important for the performance of the page loading.
 2. Drop it into the `images/` folder
 3. Open `data.js` and add a new entry at the end of the list (before `];`):
 
