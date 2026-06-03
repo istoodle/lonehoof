@@ -19,6 +19,13 @@ lonehoof/
 ```
 
 ---
+## Things TODO
+
+- Mobile version is not showing secondary image and also images like 'climate deniers' is covering the text
+- favicon url icon?
+- custom 404 page
+- submit sitemap to google search console
+
 
 ## How to add a new piece
 
@@ -38,6 +45,15 @@ lonehoof/
 ```
 
 4. Save `data.js`, commit and push to GitHub. Done.
+
+---
+## Completing Manual Printspace orders
+
+- Go to Art Store > Products. 
+- Select the print and an 'Order Details - Make a manual ecommerce order' dialog pops up
+- You can add Customer Details and delivery address
+- Not tested beyond this. Hoping this works in the regular way
+- They should get certificate etc in the regular way
 
 ---
 
