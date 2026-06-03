@@ -910,48 +910,55 @@ footer p {
     padding: 1.4rem 1rem;
   }
 
-  /* Detail overlay full-screen on mobile */
+  /* Overlay scrolls the whole page vertically */
   .detail-overlay {
     overflow-y: auto;
   }
 
-  /* On mobile the overlay fills the screen; we use a flex column so the
-     close bar, image, and info stack naturally and scroll together.
-     padding-top: 0 because the close bar sits above everything. */
+  /* Stack: close bar → image → info, plain column, no height constraints */
   .detail-inner {
+    flex-direction: column;
     min-height: auto;
     padding-top: 0;
-    flex-direction: column;
   }
 
-  /* Thin close bar pinned at the very top — outside the image */
+  /* Close button in its own bar above everything — never over the image */
   .detail-close {
     position: sticky;
     top: 0;
+    left: 0;
     right: auto;
-    align-self: flex-end;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    width: 100%;
     padding: 0.6rem 1rem;
     background: var(--bg);
     border-bottom: 1px solid var(--border);
-    z-index: 320;
     box-sizing: border-box;
+    z-index: 320;
   }
 
+  /* Image panel: NO height cap — renders at its natural aspect ratio */
   .detail-img-panel {
-    max-height: 38vh;
     min-height: auto;
+    max-height: none;
+    height: auto;
     padding: 1rem 1rem 0.5rem;
-    /* image panel should not be taller than needed */
     flex: 0 0 auto;
   }
 
+  /* Image fills panel width, height follows aspect ratio naturally */
+  .detail-img-panel img {
+    max-height: none;
+    width: 100%;
+    height: auto;
+  }
+
+  /* Info panel sits directly below the image, no overlap */
   .detail-info-panel {
-    padding: 1.25rem 1rem 5rem;
     flex: 0 0 auto;
+    padding: 1.25rem 1rem 5rem;
   }
 
   .detail-title {
@@ -965,8 +972,6 @@ footer p {
   .detail-zoom-hint {
     display: none;
   }
-
-  /* less relevant on touch */
 }
 
 /* ── Small mobile (≤480px) ───────────────────────────────── */
@@ -991,10 +996,6 @@ footer p {
     flex-direction: column;
     align-items: flex-start;
     gap: 0.3rem;
-  }
-
-  .detail-img-panel {
-    max-height: 35vh;
   }
 
   .header-socials img {
