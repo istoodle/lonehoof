@@ -402,11 +402,6 @@ main {
   min-height: calc(100vh - var(--header-h));
 }
 
-.detail-img-panel {
-  overflow: hidden;
-  /* contain zoomed images within the panel */
-}
-
 .detail-img-panel img {
   max-width: 100%;
   max-height: calc(100vh - var(--header-h) - 6rem);
@@ -422,6 +417,11 @@ main {
 .detail-img-panel img.zoomed {
   cursor: zoom-out;
   transform: scale(1.6);
+}
+
+/* When zoomed, let the overlay scroll in both axes so the user can pan */
+.detail-overlay.zoomed {
+  overflow: auto;
 }
 
 /* Magnify hint */
