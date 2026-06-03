@@ -21,10 +21,12 @@ lonehoof/
 ---
 ## Things TODO
 
-- Mobile version is not showing secondary image and also images like 'climate deniers' is covering the text
+- image definition is poor throughout - especially advent calendar. Would paging fix this?
+- while the image definition is a problem, I've disabled zooming for now
 - favicon url icon?
 - custom 404 page
 - submit sitemap to google search console
+- twitter is mentioned in the codebase but I'm not using twitter (clean up?)
 
 
 ## How to add a new piece
