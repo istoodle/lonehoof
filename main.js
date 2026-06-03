@@ -9,13 +9,13 @@ const CONTACT_EMAIL = 'lone_hoof@outlook.com';
 
 // ── 1. HEADER HEIGHT ──────────────────────────────────────
 function setHeaderOffset() {
-  const header    = document.querySelector('header');
-  const mainEl    = document.querySelector('main');
+  const header = document.querySelector('header');
+  const mainEl = document.querySelector('main');
   const mobileNav = document.getElementById('mobileNav');
   if (!header) return;
   const h = Math.ceil(header.getBoundingClientRect().height);
-  if (mainEl)    mainEl.style.paddingTop = h + 'px';
-  if (mobileNav) mobileNav.style.top     = h + 'px';
+  if (mainEl) mainEl.style.paddingTop = h + 'px';
+  if (mobileNav) mobileNav.style.top = h + 'px';
   document.documentElement.style.setProperty('--header-h', h + 'px');
 }
 setHeaderOffset();
@@ -63,8 +63,8 @@ function slugify(str) {
 }
 function escHtml(str) {
   return String(str)
-    .replace(/&/g,'&amp;').replace(/</g,'&lt;')
-    .replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+    .replace(/&/g, '&amp;').replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 }
 
 
@@ -100,18 +100,18 @@ overlay.innerHTML = `
   </div>`;
 document.body.appendChild(overlay);
 
-const detailImg       = document.getElementById('detailImg');
-const detailImg2Wrap  = document.getElementById('detailImg2Wrap');
-const detailImg2      = document.getElementById('detailImg2');
-const detailTitle     = document.getElementById('detailTitle');
-const detailMeta      = document.getElementById('detailMeta');
-const detailPrice     = document.getElementById('detailPrice');
-const detailEnquire   = document.getElementById('detailEnquire');
+const detailImg = document.getElementById('detailImg');
+const detailImg2Wrap = document.getElementById('detailImg2Wrap');
+const detailImg2 = document.getElementById('detailImg2');
+const detailTitle = document.getElementById('detailTitle');
+const detailMeta = document.getElementById('detailMeta');
+const detailPrice = document.getElementById('detailPrice');
+const detailEnquire = document.getElementById('detailEnquire');
 const detailPrintLink = document.getElementById('detailPrintLink');
-const detailNotes     = document.getElementById('detailNotes');
-const detailClose     = document.getElementById('detailClose');
-const detailPrev      = document.getElementById('detailPrev');
-const detailNext      = document.getElementById('detailNext');
+const detailNotes = document.getElementById('detailNotes');
+const detailClose = document.getElementById('detailClose');
+const detailPrev = document.getElementById('detailPrev');
+const detailNext = document.getElementById('detailNext');
 
 let currentIdx = -1;
 
@@ -129,6 +129,7 @@ function openDetail(idx, pushState) {
   if (d.img2) {
     detailImg2.src = 'images/' + d.img2;
     detailImg2.alt = d.title + ' (detail)';
+    detailImg2.classList.remove('zoomed');
     detailImg2Wrap.style.display = '';
   } else {
     detailImg2Wrap.style.display = 'none';
@@ -138,27 +139,27 @@ function openDetail(idx, pushState) {
 
   // Meta rows
   let meta = '';
-  if (d.size)   meta += `<div class="detail-meta-row">size &nbsp;<span>${escHtml(d.size)}</span></div>`;
+  if (d.size) meta += `<div class="detail-meta-row">size &nbsp;<span>${escHtml(d.size)}</span></div>`;
   if (d.medium) meta += `<div class="detail-meta-row">medium &nbsp;<span>${escHtml(d.medium)}</span></div>`;
-  if (d.paper)  meta += `<div class="detail-meta-row">paper &nbsp;<span>${escHtml(d.paper)}</span></div>`;
+  if (d.paper) meta += `<div class="detail-meta-row">paper &nbsp;<span>${escHtml(d.paper)}</span></div>`;
   detailMeta.innerHTML = meta;
 
   // Price / buy / print link
   if (d.price) {
-    detailPrice.textContent        = d.price;
-    detailPrice.style.display      = '';
-    detailEnquire.href             = 'contact.html?item=' + slugify(d.title);
-    detailEnquire.style.display    = '';
-    detailPrintLink.style.display  = '';
+    detailPrice.textContent = d.price;
+    detailPrice.style.display = '';
+    detailEnquire.href = 'contact.html?item=' + slugify(d.title);
+    detailEnquire.style.display = '';
+    detailPrintLink.style.display = '';
   } else {
-    detailPrice.style.display      = 'none';
-    detailEnquire.style.display    = 'none';
-    detailPrintLink.style.display  = 'none';
+    detailPrice.style.display = 'none';
+    detailEnquire.style.display = 'none';
+    detailPrintLink.style.display = 'none';
   }
 
   // Notes
   if (d.notes) {
-    detailNotes.textContent   = d.notes;
+    detailNotes.textContent = d.notes;
     detailNotes.style.display = '';
   } else {
     detailNotes.style.display = 'none';
@@ -167,7 +168,7 @@ function openDetail(idx, pushState) {
   overlay.classList.add('active');
   document.body.style.overflow = 'hidden';
 
-  detailPrev.style.visibility = idx > 0                  ? 'visible' : 'hidden';
+  detailPrev.style.visibility = idx > 0 ? 'visible' : 'hidden';
   detailNext.style.visibility = idx < ARTWORK.length - 1 ? 'visible' : 'hidden';
 
   // Push a hash so the browser back button works
@@ -207,8 +208,9 @@ window.addEventListener('DOMContentLoaded', () => {
   }
 });
 
-// Zoom toggle on primary image
+// Zoom toggle on primary and secondary images
 detailImg.addEventListener('click', () => detailImg.classList.toggle('zoomed'));
+detailImg2.addEventListener('click', () => detailImg2.classList.toggle('zoomed'));
 
 // Close button — always go straight back to grid, skip image history
 detailClose.addEventListener('click', () => {
@@ -231,15 +233,15 @@ overlay.addEventListener('click', e => {
 // Keyboard
 document.addEventListener('keydown', e => {
   if (!overlay.classList.contains('active')) return;
-  if (e.key === 'Escape')     closeDetail();
-  if (e.key === 'ArrowLeft')  detailPrev.click();
+  if (e.key === 'Escape') closeDetail();
+  if (e.key === 'ArrowLeft') detailPrev.click();
   if (e.key === 'ArrowRight') detailNext.click();
 });
 
 
 // ── 4. MOBILE NAV ─────────────────────────────────────────
 const menuToggle = document.getElementById('menuToggle');
-const mobileNav  = document.getElementById('mobileNav');
+const mobileNav = document.getElementById('mobileNav');
 
 if (menuToggle && mobileNav) {
   menuToggle.addEventListener('click', () => {
@@ -257,8 +259,8 @@ if (menuToggle && mobileNav) {
 
 // ── 5. CONTACT FORM ───────────────────────────────────────
 window.handleContact = function () {
-  const name    = document.getElementById('name')?.value.trim()    || '';
-  const email   = document.getElementById('email')?.value.trim()   || '';
+  const name = document.getElementById('name')?.value.trim() || '';
+  const email = document.getElementById('email')?.value.trim() || '';
   const subject = document.getElementById('subject')?.value.trim() || 'Message from lonehoof.com';
   const message = document.getElementById('message')?.value.trim() || '';
   if (!email || !message) { alert('Please fill in your email and message.'); return; }
@@ -270,8 +272,8 @@ window.handleContact = function () {
 };
 
 window.addEventListener('DOMContentLoaded', () => {
-  const params       = new URLSearchParams(window.location.search);
-  const item         = params.get('item');
+  const params = new URLSearchParams(window.location.search);
+  const item = params.get('item');
   const subjectField = document.getElementById('subject');
   if (item && subjectField) {
     subjectField.value = 'Order enquiry: ' + item.replace(/-/g, ' ');
