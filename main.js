@@ -79,9 +79,6 @@ overlay.innerHTML = `
   <div class="detail-inner">
     <div class="detail-img-panel" id="detailImgPanel">
       <img src="" alt="" id="detailImg" />
-      <div class="detail-img2-wrap" id="detailImg2Wrap" style="display:none">
-        <img src="" alt="" id="detailImg2" />
-      </div>
       <div class="detail-zoom-hint">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
           <circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="22" y2="22"/>
@@ -96,6 +93,10 @@ overlay.innerHTML = `
       <a   class="detail-enquire" id="detailEnquire" href="#">enquire to order</a>
       <a   class="detail-print-link" id="detailPrintLink" href="how-to-buy.html">about the prints &amp; how to order &#8594;</a>
       <div class="detail-notes"   id="detailNotes"></div>
+      <div class="detail-img2-wrap" id="detailImg2Wrap" style="display:none">
+        <p class="detail-img2-label">shown in situ</p>
+        <img src="" alt="" id="detailImg2" />
+      </div>
     </div>
   </div>`;
 document.body.appendChild(overlay);
@@ -129,7 +130,6 @@ function openDetail(idx, pushState) {
   if (d.img2) {
     detailImg2.src = 'images/' + d.img2;
     detailImg2.alt = d.title + ' (detail)';
-    detailImg2.classList.remove('zoomed');
     detailImg2Wrap.style.display = '';
   } else {
     detailImg2Wrap.style.display = 'none';
@@ -208,9 +208,8 @@ window.addEventListener('DOMContentLoaded', () => {
   }
 });
 
-// Zoom toggle on primary and secondary images
+// Zoom toggle on primary image only
 detailImg.addEventListener('click', () => detailImg.classList.toggle('zoomed'));
-detailImg2.addEventListener('click', () => detailImg2.classList.toggle('zoomed'));
 
 // Close button — always go straight back to grid, skip image history
 detailClose.addEventListener('click', () => {
