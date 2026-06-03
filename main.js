@@ -124,8 +124,6 @@ function openDetail(idx, pushState) {
   // Primary image
   detailImg.src = 'images/' + d.img;
   detailImg.alt = d.title;
-  detailImg.classList.remove('zoomed');
-  overlay.classList.remove('zoomed');
 
   // Secondary image
   if (d.img2) {
@@ -180,7 +178,6 @@ function openDetail(idx, pushState) {
 
 function closeDetail() {
   overlay.classList.remove('active');
-  overlay.classList.remove('zoomed');
   document.body.style.overflow = '';
   currentIdx = -1;
   // Always snap straight back to the grid, clearing any art-N hash entries
@@ -210,11 +207,7 @@ window.addEventListener('DOMContentLoaded', () => {
   }
 });
 
-// Zoom toggle on primary image only — also marks overlay so it becomes pannable
-detailImg.addEventListener('click', () => {
-  detailImg.classList.toggle('zoomed');
-  overlay.classList.toggle('zoomed', detailImg.classList.contains('zoomed'));
-});
+// Zoom disabled
 
 // Close button — always go straight back to grid, skip image history
 detailClose.addEventListener('click', () => {
