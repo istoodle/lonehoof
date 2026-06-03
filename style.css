@@ -829,6 +829,12 @@ footer p {
   color: var(--text);
 }
 
+.footer-version {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 10px;
+  color: var(--border);
+}
+
 /* =====================
    RESPONSIVE
    ===================== */
