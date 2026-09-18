@@ -30,7 +30,7 @@ const ARTWORK = [
   {
     img: "the-situation-in-paradise.jpg",
     title: "The situation in paradise",
-    price: "£49 (+ P&P)",
+    price: "£50 (+ P&P)",
     size: "26.5 x 32 cm (30.5 x 36 cm with border)",
     medium: "charcoal",
     paper: "300 gsm Hahnemühle German Etching paper (see link below on how to order)",
@@ -41,7 +41,7 @@ const ARTWORK = [
   {
     img: "insta-ready-at-the-cathedral.jpg",
     title: "Insta-ready at the cathedral",
-    price: "£49 (+ P&P)",
+    price: "£50 (+ P&P)",
     size: "26.5 x 32 cm (30.5 x 36 cm with border)",
     medium: "charcoal",
     paper: "300 gsm Hahnemühle German Etching paper (see link below on how to order)",
@@ -52,7 +52,7 @@ const ARTWORK = [
   {
     img: "quaint-and-outdated-rituals.jpg",
     title: "Quaint and outdated rituals",
-    price: "£49 (+ P&P)",
+    price: "£50 (+ P&P)",
     size: "26.5 x 32.5 cm (30.5 x 36 cm with border)",
     medium: "charcoal",
     paper: "300 gsm Hahnemühle German Etching paper (see link below on how to order)",
@@ -63,7 +63,7 @@ const ARTWORK = [
   {
     img: "a-child-showing-kindness-at-christmas.jpg",
     title: "A child showing kindness at christmas",
-    price: "£49 (+ P&P)",
+    price: "£50 (+ P&P)",
     size: "25.5 x 37.5 cm (29.5 x 41.5 cm with border)",
     medium: "charcoal",
     paper: "300 gsm Hahnemühle German Etching paper (see link below on how to order)",
@@ -74,7 +74,7 @@ const ARTWORK = [
   {
     img: "climate-change-deniers-enjoying-a-game-of-chess.jpg",
     title: "Climate change deniers enjoying a game of chess",
-    price: "£39 (+ P&P)",
+    price: "£45 (+ P&P)",
     size: "25.5 x 27 cm (29.5 x 31 cm with border)",
     medium: "charcoal",
     paper: "300 gsm Hahnemühle German Etching paper (see link below on how to order)",
@@ -85,7 +85,7 @@ const ARTWORK = [
   {
     img: "la-cave-du-jazz.jpg",
     title: "La cave du jazz",
-    price: "£39 (+ P&P)",
+    price: "£45 (+ P&P)",
     size: "29.5 x 24.5 cm (33.5 x 28.5 cm with border)",
     medium: "charcoal",
     paper: "300 gsm Hahnemühle German Etching paper (see link below on how to order)",
@@ -93,18 +93,19 @@ const ARTWORK = [
     img2: "cave2.jpg",
   },
 
+  // ── GALLERY ONLY (not for sale) ──────────────────────────
+
   {
     img: "the-scroller-the-troller-and-the-influencer.jpg",
     title: "The scroller, the troller and the influencer",
-    price: "£39 (+ P&P)",
+	price: null,
     size: "25.5 x 27 cm (29.5 x 31 cm with border)",
     medium: "charcoal",
-    paper: "300 gsm Hahnemühle German Etching paper (see link below on how to order)",
+    paper: "300 gsm",
     notes: null,
     img2: "scroller2.jpg",
   },
 
-  // ── GALLERY ONLY (not for sale) ──────────────────────────
 
   {
     img: "hoofy-advent-2025.jpg",
